@@ -191,7 +191,7 @@ Whatever files/folders aren't supposed to be tracked by git, just write it down 
 In order to merge, you need to first switch to the branch wehere you want codebase to be merged to. Then run the following command which merges the branch to the intended branch where you are currently sitting on.
 
 ```bash
-git merge nav-bar
+git merge <name of the branch>
 ```
 
 You can now check the git graph and also check the logs of the master branch
