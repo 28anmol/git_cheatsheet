@@ -85,3 +85,10 @@
   > ls
   HEAD		config		description	hooks		info		objects		refs
   ```
+
+
+**Basics of Git and it's working**
+
+```bash
+Working Directory -----> git add -----> Staging Area -----> git commit -----> Repo -----> git push -----> Github
+```
