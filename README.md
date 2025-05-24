@@ -3,7 +3,7 @@
 ## Documentation which runs through important git commands and their explanation! Learning git the conventional way - through command line interface!
 
 
-#### What is Git? - It is a software, helps in version control and tracking of files/modifications!
+#### What is Git? - Git is a version control software which helps you to keep a track of changes or modifications in a computer file!
 #### What is Github? - It's a service!
 
 <br>
@@ -117,6 +117,22 @@ Write code -----> add to trackimng zone of git -----> commit
   ```
     - Git works on the idea of atomic commits which means **ONE COMMIT FOR ONE FEATURE/COMPONENT/FIX/BUG**
     - **ONE BUG: ONE COMMIT**
+
+
+
+**Git configuration**
+
+- Setting up username and email
+  ```bash
+  git config --global user.name "Your Name"
+  git config --global user.email "Your Email"
+  ```
+
+- Setting up the text editor - in this case VS Code
+  ```bash
+  git config --global core.editor "code --wait"
+  ```
+
 
 
 ### Notes
