@@ -34,7 +34,7 @@
   ```bash
   mkdir gitone gittwo gitthree
   ```
-- Check git software status in first folder
+- Check git software status in first folder 
   ```bash
   git status
   ```
@@ -92,3 +92,17 @@
 ```bash
 Working Directory -----> git add -----> Staging Area -----> git commit -----> Repo -----> git push -----> Github
 ```
+
+```bash
+Write code -----> add to trackimng zone of git -----> commit
+```
+
+- Tracking a file by git/ Adding the file to git's trackable zone
+  ```bash
+  git add <filename>
+  ```
+
+
+### Notes
+- Develop a habit of using `git add` as the first thing. It tells you if git has been initialized in the folder or not yet.
+- Always check the working directory where you want git to be initialized with `pwd` command.
