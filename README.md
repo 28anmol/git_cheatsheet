@@ -253,6 +253,8 @@ git branch -d <name of branch>
 
 
 ### Notes
+- Git is a version control system which tracks every change in your code over time. It allows you to undo changes at any point in history, tracks who changed what and why, experiment safely without breaking the fear of breaking the code, wok with others without overwriting each others changes.
+- Git prevents you from making backup of working code(project_final_reallyfinal_reallythisone.zip) before you try a major change where you fear breaking up the whole code because git helps you undo things, go back in time and retrieve previous versions. It's more like a personal time machine.
 - Develop a habit of using `git status` as the first thing. It tells you if git has been initialized in the folder or not yet.
 - `git status` also tells which files have been staged or not yet, tracked or not tracked yet, modified or not modified yet.
 - Always check the working directory where you want git to be initialized with `pwd` command.
