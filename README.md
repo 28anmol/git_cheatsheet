@@ -139,7 +139,7 @@ Write code -----> add to trackimng zone of git -----> commit
   git config --global core.editor "code --wait"
   ```
 
-**gitignore file** 
+**.gitignore file** 
 <br>
 A very special file read by git itself. You need to manually create it. There are a lot of information for instance API keys, passwords etc which are sensitive and need to store it separately. This is the folder where you can store this without git tracking any of these info.
 
@@ -148,7 +148,7 @@ touch .gitignore
 ```
 <br>
 Verify the existence of the `.gitignore` file using `ls -la` command.
-
+<br>
 Whatever files/folders aren't supposed to be tracked by git, just write it down in the `.gitignore` file, simply write it down and then check the `git status` to confirm if they have been removed. `.gitignore` would be tracked by git itself.
 
 
