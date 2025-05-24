@@ -6,6 +6,8 @@
 #### What is Git? - It is a software, helps in version control and tracking of files/modifications
 #### What is Github? - It is a service.
 
+<br>
+<br>
 
 **Follow the steps to have git up and running on a folder existing locally on your machine**
 
