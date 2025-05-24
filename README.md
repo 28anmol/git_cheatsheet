@@ -97,7 +97,7 @@ Working Directory -----> git add -----> Staging Area -----> git commit -----> Re
 Write code -----> add to trackimng zone of git -----> commit
 ```
 
-- Tracking a file by git or adding the file to git's trackable zone:
+- Tracking a file by git or adding the file to git's trackable zone or staging a file for next commit:
   ```bash
   git add <filename>
   ```
@@ -107,6 +107,19 @@ Write code -----> add to trackimng zone of git -----> commit
   ```bash
   git add .
   ```
+  This would add all modified files to staging area.
+
+- Unstaging a file from the stage:
+  ```bash
+  git reset <filename>
+  ```
+
+  OR
+
+  ```bash
+  git reset
+  ```
+  This unstages all files from the staging area but saves your modified files
 
 - Committing to a file with a message (-m):
   ```bash
@@ -251,3 +264,4 @@ git branch -d <name of branch>
 - Go to `.git` folder and checkout the `HEAD` file to see where does the `HEAD` point in that current active branch
 - A general rule of writing commits: present tense + imperative. Example: add file to codebase, add 4 lines in python file, merge header with footer. It'a like a command you give in present tense: "Hey codebase, do this, do that".
 - Basically when you merge two branches with conflict, you resolve it manually, then you need to `git add` the file and perform `git commit` afterwards. `git merge` is also basically merging+commiting with a message essentially. If there are no conflicts, you can merge with editor open, you type in the merge message, save and close and you see that the file has been merged with a commit successfully in the terminal.
+- If you want to move your `HEAD` to a previous commit, or you want to go back in time or you want to branch from past, you have to use `<commit-hash>` or the commit id you see on `git log` to do all that stuff. It helps you time travel in git branches to mend your faults or to experiment on a version from the past without affecting the main branch.
