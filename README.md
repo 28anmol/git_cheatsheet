@@ -3,8 +3,8 @@
 ## Documentation which runs through important git commands and their explanation! Learning git the conventional way - through command line interface!
 
 
-#### What is Git? - It is a software, helps in version control and tracking of files/modifications
-#### What is Github? - It is a service.
+#### What is Git? - It is a software, helps in version control and tracking of files/modifications!
+#### What is Github? - It's a service!
 
 <br>
 <br>
