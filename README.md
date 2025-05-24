@@ -4,8 +4,8 @@
 ### Learning git through the conventional way - command line interface
 
 
-&nbsp; #### What is Git? - It is a software, helps in version control and tracking of files/modifications
-&nbsp; #### What is Github? - It is a service.
+&nbsp;#### What is Git? - It is a software, helps in version control and tracking of files/modifications
+&nbsp;#### What is Github? - It is a service.
 
 
 **Follow the steps to have git up and running on a folder existing locally on your machine**
