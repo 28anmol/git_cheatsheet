@@ -146,9 +146,9 @@ A very special file read by git itself. You need to manually create it. There ar
 ```bash
 touch .gitignore
 ```
-<br>
-Verify the existence of the `.gitignore` file using `ls -la` command.
-<br>
+
+Verify the existence of the `.gitignore` file using `ls -la` command. <br>
+
 Whatever files/folders aren't supposed to be tracked by git, just write it down in the `.gitignore` file, simply write it down and then check the `git status` to confirm if they have been removed. `.gitignore` would be tracked by git itself.
 
 
