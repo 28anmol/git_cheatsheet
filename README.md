@@ -115,7 +115,7 @@ Write code -----> add to trackimng zone of git -----> commit
 
 - log command (it's a log of commits with details)
   ```bash
-  git commit
+  git log
   ```
   OR
   ```bash
@@ -123,21 +123,52 @@ Write code -----> add to trackimng zone of git -----> commit
   ```
     - Git works on the idea of atomic commits which means **ONE COMMIT FOR ONE FEATURE/COMPONENT/FIX/BUG**
     - **ONE BUG: ONE COMMIT**
+  
+  OR
+  
+  ```bash
+  git log -p
+  ```
+  This shows every commit + actual changes made.
 
+  OR
+
+  ```bash
+  git log --oneline --graph --all
+  ```
+  This shows the git tree
 
 
 **Git configuration**
 
-- Setting up username and email
+- Setting up username and email (global scope)
   ```bash
   git config --global user.name "Your Name"
   git config --global user.email "Your Email"
   ```
 
-- Setting up the text editor - in this case VS Code
+- Setting up the text editor - in this case VS Code (global scope)
   ```bash
   git config --global core.editor "code --wait"
   ```
+
+- Setting up username and email (local scope, confined to that repository itself)
+  ```bash
+  git config --local user.name "Your Name"
+  git config --local user.email "Your Email"
+  ```
+
+- Setting up username and email (system wide - for all users on that system)
+  ```bash
+  git config --system user.name "Your Name"
+  git config --system user.email "Your Email"
+  ```
+
+- configuration list
+  ```bash
+  git config --list
+  ```
+  
 
 **.gitignore file**
 
@@ -219,3 +250,4 @@ git branch -d <name of branch>
 - Always commit before switching to another branch
 - Go to `.git` folder and checkout the `HEAD` file to see where does the `HEAD` point in that current active branch
 - A general rule of writing commits: present tense + imperative. Example: add file to codebase, add 4 lines in python file, merge header with footer. It'a like a command you give in present tense: "Hey codebase, do this, do that".
+- Basically when you merge two branches with conflict, you resolve it manually, then you need to `git add` the file and perform `git commit` afterwards. `git merge` is also basically merging+commiting with a message essentially. If there are no conflicts, you can merge with editor open, you type in the merge message, save and close and you see that the file has been merged with a commit successfully in the terminal.
