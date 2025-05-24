@@ -1,11 +1,10 @@
 # Git and Github Cheatsheet
 
-### Just a readme which runs through major important git commands and their explanation.
-### Learning git through the conventional way - command line interface
+## Documentation which runs through important git commands and their explanation! Learning git the conventional way - through command line interface!
 
 
-&nbsp;#### What is Git? - It is a software, helps in version control and tracking of files/modifications
-&nbsp;#### What is Github? - It is a service.
+#### What is Git? - It is a software, helps in version control and tracking of files/modifications
+#### What is Github? - It is a service.
 
 
 **Follow the steps to have git up and running on a folder existing locally on your machine**
