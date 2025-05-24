@@ -104,5 +104,6 @@ Write code -----> add to trackimng zone of git -----> commit
 
 
 ### Notes
-- Develop a habit of using `git add` as the first thing. It tells you if git has been initialized in the folder or not yet.
+- Develop a habit of using `git status` as the first thing. It tells you if git has been initialized in the folder or not yet.
+- `git status` also tells which files have been staged or not yet.
 - Always check the working directory where you want git to be initialized with `pwd` command.
