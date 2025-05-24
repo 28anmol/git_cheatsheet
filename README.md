@@ -194,7 +194,13 @@ In order to merge, you need to first switch to the branch wehere you want codeba
 git merge <name of the branch>
 ```
 
-You can now check the git graph and also check the logs of the master branch
+You can now check the git graph and also check the logs of the master branch.
+
+To delete a branch, write the following command:
+
+```bash
+git branch -d <name of branch>
+```
 
 
 
