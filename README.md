@@ -218,3 +218,4 @@ git branch -d <name of branch>
 - there are multiple commits in a branch and `HEAD` points to the latest commit in that branch. But you can change to which commit the `HEAD` points to in that particular branch.
 - Always commit before switching to another branch
 - Go to `.git` folder and checkout the `HEAD` file to see where does the `HEAD` point in that current active branch
+- A general rule of writing commits: present tense + imperative. Example: add file to codebase, add 4 lines in python file, merge header with footer. It'a like a command you give in present tense: "Hey codebase, do this, do that".
