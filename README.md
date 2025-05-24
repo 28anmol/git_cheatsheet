@@ -186,7 +186,7 @@ Whatever files/folders aren't supposed to be tracked by git, just write it down 
   git checkout -b <name of new branch>
   ```
 
-**Git branch merging**<br>
+**Git branch merging**
 In order to merge, you need to first switch to the branch wehere you want codebase to be merged to. Then run the following command which merges the branch to the intended branch where you are currently sitting on.
 
 ```bash
