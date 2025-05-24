@@ -102,6 +102,12 @@ Write code -----> add to trackimng zone of git -----> commit
   git add <filename>
   ```
 
+  OR
+
+  ```bash
+  git add .
+  ```
+
 - Committing to a file with a message (-m):
   ```bash
   git commit -m "add file one"
