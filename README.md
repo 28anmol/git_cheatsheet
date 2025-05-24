@@ -4,11 +4,11 @@
 ### Learning git through the conventional way - command line interface
 
 
-#### What is Git? - It is a software, helps in version control and tracking of files/modifications
-#### What is Github? - It is a service.
+&nbsp; #### What is Git? - It is a software, helps in version control and tracking of files/modifications
+&nbsp; #### What is Github? - It is a service.
 
 
-Follow the steps to have git up and running on a folder existing locally on your machine
+**Follow the steps to have git up and running on a folder existing locally on your machine**
 
 - Download Git from www.git-scm.com (Current version - 2.49.0)
 - Verify version
@@ -23,7 +23,7 @@ Follow the steps to have git up and running on a folder existing locally on your
     ```
 
 
-Setup and configure git on a folder:
+**Setup and configure git on a folder:**
 
 - create a folder in your working directory
   ```bash
