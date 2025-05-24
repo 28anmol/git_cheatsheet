@@ -97,13 +97,31 @@ Working Directory -----> git add -----> Staging Area -----> git commit -----> Re
 Write code -----> add to trackimng zone of git -----> commit
 ```
 
-- Tracking a file by git/ Adding the file to git's trackable zone
+- Tracking a file by git or adding the file to git's trackable zone:
   ```bash
   git add <filename>
   ```
 
+- Committing to a file with a message (-m):
+  ```bash
+  git commit -m "add file one"
+  ```
+
+- log command (it's a log of commits with details)
+  ```bash
+  git commit
+  ```
+  OR
+  ```bash
+  git log --oneline
+  ```
+    - Git works on the idea of atomic commits which means **ONE COMMIT FOR ONE FEATURE/COMPONENT/FIX/BUG**
+    - **ONE BUG: ONE COMMIT**
+
 
 ### Notes
 - Develop a habit of using `git status` as the first thing. It tells you if git has been initialized in the folder or not yet.
-- `git status` also tells which files have been staged or not yet.
+- `git status` also tells which files have been staged or not yet, tracked or not tracked yet, modified or not modified yet.
 - Always check the working directory where you want git to be initialized with `pwd` command.
+- `git add` tells git to start tracking the particular file and also shifts the file to the staging area
+- `git commit` always needs a message that's why it works with `-m`.
