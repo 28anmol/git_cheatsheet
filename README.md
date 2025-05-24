@@ -149,7 +149,54 @@ touch .gitignore
 
 Verify the existence of the `.gitignore` file using `ls -la` command. <br>
 
-Whatever files/folders aren't supposed to be tracked by git, just write it down in the `.gitignore` file, simply write it down and then check the `git status` to confirm if they have been removed. `.gitignore` would be tracked by git itself.
+Whatever files/folders aren't supposed to be tracked by git, just write it down in the `.gitignore` file, simply write it down and then check the `git status` to confirm if they have been removed. `.gitignore` would be tracked by git itself. <br>
+
+
+**Git Branches**
+
+- To know which branch are you working on, use the following command:
+  ```bash
+  git branch
+  ```
+
+- Creating a git branch
+  ```bash
+  git branch <name of new branch>
+  ```
+
+- Switching to a different branch
+  ```bash
+  git checkout <name of new branch>
+  ```
+
+  OR
+
+  ```bash
+  git switch <name of new branch>
+  ```
+
+- Create branch and move to the new branch
+  ```bash
+  git switch -c <name of new branch>
+  ```
+
+  OR
+
+  ```bash
+  git checkout -b <name of new branch>
+  ```
+
+**Git branch merging**<br>
+In order to merge, you need to first switch to the branch wehere you want codebase to be merged to. Then run the following command which merges the branch to the intended branch where you are currently sitting on.
+
+```bash
+git merge nav-bar
+```
+
+You can now check the git graph and also check the logs of the master branch
+
+
+
 
 
 
@@ -160,3 +207,7 @@ Whatever files/folders aren't supposed to be tracked by git, just write it down 
 - Always check the working directory where you want git to be initialized with `pwd` command.
 - `git add` tells git to start tracking the particular file and also shifts the file to the staging area
 - `git commit` always needs a message that's why it works with `-m`.
+- `HEAD` points to where the branch is currently at. OFc, you can change the location pointer of `HEAD` explicitly in the codebase at your will and to your choice. Ultimately, the are just checkpoints like in a video game.
+- there are multiple commits in a branch and `HEAD` points to the latest commit in that branch. But you can change to which commit the `HEAD` points to in that particular branch.
+- Always commit before switching to another branch
+- Go to `.git` folder and checkout the `HEAD` file to see where does the `HEAD` point in that current active branch
