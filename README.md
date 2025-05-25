@@ -345,7 +345,41 @@ Stash apply: applies changes and keeps them in stash
 
 ### More commands in Git
 
+This goes back in timeline/git tree to show the version of your code at that particular commit
+```bash
+git checkout <hash-commit-id>
+```
 
+```bash
+git checkout HEAD
+```
+
+To come back to present time in git timeline
+```bash
+git checkout master
+```
+
+This command also moves you to where you were in present timeline(it just moves your HEAD back to current time or to the latest commit)
+```bash
+git reflog
+```
+
+To move HEAD 2 commits back
+```bash
+git checkout HEAD~2
+```
+
+This command reattaches HEAD
+```bash
+git switch main
+```
+
+To get back to last commit version
+```bash
+git restore <filename>
+```
+
+### Git Rebase
 
 
 ### Notes
