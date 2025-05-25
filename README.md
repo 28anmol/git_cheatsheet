@@ -254,6 +254,7 @@ git branch -d <name of branch>
 ```
 
 **Git diff**
+
 Git diff tells the difference between same files (file A and file A). The only difference is that it shows you the version of the file in X time and Y time.
 - example 1: difference between files when staged and not staged
 - example 2: difference between file 2 commits before vs current file version
