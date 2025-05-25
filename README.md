@@ -146,6 +146,13 @@ Write code -----> add to trackimng zone of git -----> commit
 
   OR
 
+   ```bash
+  git log --oneline --graph
+  ```
+  This shows the graph of the git workflow tree on the command line interface
+
+  OR
+
   ```bash
   git log --oneline --graph --all
   ```
@@ -246,8 +253,54 @@ To delete a branch, write the following command:
 git branch -d <name of branch>
 ```
 
+**Git diff**
+Git diff tells the difference between same files (file A and file A). The only difference is that it shows you the version of the file in X time and Y time.
+- example 1: difference between files when staged and not staged
+- example 2: difference between file 2 commits before vs current file version
+- example 3: how does the same file look in this branch vs other branch
 
+How to read file difference:
+- a: represents file 1
+- b: represents file 1 but in a different timeline (the same file undergoes changes over time)
+- --- : file 1
+- +++ : file 2 (the same file over time) - they don't mean removing or adding code.
 
+The command below shows the changes in your working directory which hasn't been staged yet. BAsically you have modified some files but you haven't added them on the staging area yet. This command shows exact line by line changes. You'll see the diffs for all modified but unstaged files. 
+```bash
+git diff
+```
+
+The command below shows the changes in that specific file but haven't been staged. So it shows the difference between the working directory and the staging area for that particular `<filename>`.
+```bash
+git diff <filename>
+```
+
+The command below shows the difference between same files in staging area vs last commit), staged changes for all files vs last commit
+```bash
+git diff --staged
+```
+
+This commsnd shows the staged changes for that particular file vs last commit.
+```bash
+git diff --staged <filename>
+```
+
+If you want to know which files are staged(without showing the cide diffs)
+```bash
+git diff --staged --name-only
+```
+
+This is when you punch in different commit ids from the timeline to see the differences in code 
+```bash
+git diff <commit-hash-id> <commit-hash-id>
+```
+
+Tells difference between two different branches
+```bash
+git diff <branch-name-one> <branch-name-two>
+```
+
+**Git Stashing**
 
 
 
@@ -255,6 +308,13 @@ git branch -d <name of branch>
 ### Notes
 - Git is a version control system which tracks every change in your code over time. It allows you to undo changes at any point in history, tracks who changed what and why, experiment safely without breaking the fear of breaking the code, wok with others without overwriting each others changes.
 - Git prevents you from making backup of working code(project_final_reallyfinal_reallythisone.zip) before you try a major change where you fear breaking up the whole code because git helps you undo things, go back in time and retrieve previous versions. It's more like a personal time machine.
+- Git tracks files in 3 layers
+      - Working directory
+      - Staging Area
+      - Git repository
+- Git commit is a 2 stage process
+      - From working directory to staging area(index area)
+      - From staging area to git repository
 - Develop a habit of using `git status` as the first thing. It tells you if git has been initialized in the folder or not yet.
 - `git status` also tells which files have been staged or not yet, tracked or not tracked yet, modified or not modified yet.
 - Always check the working directory where you want git to be initialized with `pwd` command.
