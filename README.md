@@ -320,7 +320,7 @@ In this situation you can stash your changes with the following command
 ```bash
 git stash
 ```
-Now you can switch to another branch with `git cswitch <branch-name>` command
+Now you can switch to another branch with `git switch <branch-name>` command
 
 When you come back to your branch - you still don't see you changes because you stashed them. Stashing is basically a temporary shelf where you can keep your code, go back move around but you need to bring the changes back to your code. The following command brings back the work in progress changes to your code
 
@@ -344,6 +344,8 @@ Stash apply: applies changes and keeps them in stash
 
 
 **More commands in Git**
+
+
 
 
 ### Notes
