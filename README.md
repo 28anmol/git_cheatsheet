@@ -539,7 +539,6 @@ cd website
 
 # make edits
 
-
 git status
 
 #add to staging area
