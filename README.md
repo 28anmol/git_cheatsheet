@@ -14,7 +14,7 @@
 
 ### Follow the steps to have git up and running on a folder existing locally on your machine
 
-- Download current version Git(2.49.0): [Git](www.git-scm.com)
+- Download current version Git(2.49.0): [Git Software Download](www.git-scm.com)
 - Verify version
     ```bash
     git --version
