@@ -2,7 +2,7 @@
 
 ## Documentation which runs through important git commands and their explanation! Learning git the conventional way - through command line interface!
 #### What is Git? - Git is a version control software which helps keep a track of changes or modifications in computer file(s)!
-#### What is Github? - It's a service!
+#### What is Github? - It's a service, which hosts/saves your git repository and git workflow on an online cloud
 
 <br>
 <br>
@@ -421,6 +421,8 @@ There is no concept of automatic conflict resolver.
 - Recovery
 - undo commits
 - Restoring
+
+*WIP.................*
 
 ```bash
 ```
