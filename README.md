@@ -302,8 +302,48 @@ git diff <branch-name-one> <branch-name-two>
 ```
 
 **Git Stashing**
+- Create a repo, work on it and commit it on the main
+- switch on another branch and work on it
+- conflicting changes do not allow to switch branch, without commits
+
+Basically you are for instance working on your branch, fixing a bug and havent staged it yet (still in middle of fixing the bug) and you switch to another branch because your colleague needs your help - then git won't allow you to switch branches before you commit or stash those changes. The output would looks as follows:
+
+```bash
+> git switch footer
+error: Your local changes to the following files would be overwritten by checkout:
+	footer.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+
+In this situation you can stash your changes with the following command
+```bash
+git stash
+```
+Now you can switch to another branch with `git cswitch <branch-name>` command
+
+When you come back to your branch - you still don't see you changes because you stashed them. Stashing is basically a temporary shelf where you can keep your code, go back move around but you need to bring the changes back to your code. The following command brings back the work in progress changes to your code
+
+```bash
+git stash pop
+```
+
+Popping stashes to other branches by first changing the branch and then using the following command. This shows that stashing/popping is not just limited to one branch but can be moved to other branches as well.
+```bash
+git stash pop
+```
+
+More commands
+```bash
+git stash list
+git stash apply stash@{0}
+```
+
+Stash pop brings back those changes
+Stash apply: applies changes and keeps them in stash
 
 
+**More commands in Git**
 
 
 ### Notes
