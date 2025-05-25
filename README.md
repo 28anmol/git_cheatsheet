@@ -432,10 +432,10 @@ ssh -T git@github.com
 ```
 
 **Creating an empty repository on github, Connecting github repo to local folder on computer to that github repository through command line**
-- Pleasw have your ssh key generated and added to your computer and github account. Follow the links attached at the top for more info!
+- Please have your ssh key generated and added to your computer and github account. Follow the links attached at the top for more info!
 - Create an empty repository (don't add readme, make it public/private, don't add license yet, add a short description, dont add .gitignore yet)
 - Once repo created you will see a set of commands shown up on github (Quick setup)
-- Follow these steps
+- Following is the complete detialed workflow of connecting your local git repository to github cloud environment:
 
   ```bash
   # Create a folder
@@ -466,6 +466,7 @@ ssh -T git@github.com
   touch index.html
 
   # Add code to it
+  # Config your user name, email etc for that repository
 
   # Then add it to staging area
   git add index.html
@@ -476,15 +477,51 @@ ssh -T git@github.com
   # Create the gitignore file
   touch .gitignore
 
+  # Add and commit gitignore file
+  git commit -am "add gitignore file to repository"
+
   # Rename your master branch to main
   git branch -M main
 
   # Check git branch
   git branch
 
-  #
+  # Optionally you can also check the exisitence of hidden files and folders like .git & .gitignore using this command
+  ls -la
+
+  # Other optional commands for directories
+  cd, ls, mkdir, touch, echo "Hello", cat <filename>, echo "Hello" >> <filename>
+
+  # Command tells you if you have any remote repository being setup
+  git remote -v
+
+  # To connect a remote repository, have a connection with them, So origin is the name of the remote repository - we just named it origin(can also call it branch) for our convenience - see the command below
+  git remote add <name> <url>
+
+  # Link your local folder to cloud repository
+  git remote add origin https://github.com/28anmol/learn-git.git
+
+  # Confirm the remote po configuration
+  git remote -v
+
+  # Optionally use other commands:
+  git remote rename <oldname> <newname>
+  git remote remove <name>
+
+  # Start pushing stuff to your cloud repository, push into this origin repo from my main branch(master branch on local system), -u is setup as upstream which allows you to run future command
+  git push <remote> <branch>
+  git push <remote> # local branch : remote branch
+  git push
   
+  git push -u origin main
+  # OR
+  git push origin main
+
   ```
+
+- Important note: Once u have multiple files committed prehand, you cannot select which files to push, github basically pushes all commits to the cloud environment.
+- If you want to control push - control it from the `git add` stage, commit only those you want to push and then finally push the files you want.
+- If your repo is setup remotely to a repo, you can undo it as well or change it to another repo as well.
 
 ### Personal research, more advanced commands:
 - To undo changes
@@ -500,6 +537,8 @@ ssh -T git@github.com
 *WIP.................*
 
 ```bash
+# URL can be SSH URL or HTTPS URL
+git clone <URL>
 ```
 
 ### Helpful Notes & Tips
@@ -531,3 +570,9 @@ ssh -T git@github.com
 - Once a side/regular branch is merged on main/master branch, you can still work on side branch and merge it again with new features or bug fixes etc.
 - As soon as you initialize git in a folder it turns into a repository or commonly known as git repository.
 - On github master branch is called `main` while git software still calls it `master`
+- Git is a software and github is a service to host your git and codebase online
+- Github: Collaboration + Backup + open Source
+- Other online services are: GitLab OR BitBucket
+- Github uses PAT or SSH to work with Command line Interface on your local machine. user-id, email or password based code push is not allowed on github
+- Check instructions for your OS on github website, along with updated resources
+- Local Repository: On your system, Remote Repository: On the github cloud environment
