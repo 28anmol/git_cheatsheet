@@ -7,7 +7,7 @@
 <br>
 <br>
 
-Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp ([Link Tutorial](https://www.youtube.com/watch?v=zTjRZNkhiEU&t=12s))
+Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp ([Link Tutorial](https://www.youtube.com/watch?v=zTjRZNkhiEU&t=12s)) + my own research and experimentation
 
 **Follow the steps to have git up and running on a folder existing locally on your machine**
 
