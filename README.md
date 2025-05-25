@@ -2,12 +2,15 @@
 
 ## Documentation which runs through important git commands and their explanation! Learning git the conventional way - through command line interface!
 #### What is Git? - Git is a version control software which helps keep a track of changes or modifications in computer file(s)!
-#### What is Github? - It's a service, which hosts/saves your git repository and git workflow on an online cloud
+#### What is Github? - It's a service, which hosts/saves your git repository and git workflow on an online cloud environment
 
 <br>
 <br>
 
 Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp ([Link Tutorial](https://www.youtube.com/watch?v=zTjRZNkhiEU&t=12s)) + my own research and experimentation
+Github docs link: [Github docs](https://docs.github.com/en/get-started)
+Generating ssh key: [SSH Key Generate](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+Adding ssh key: [Add SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 ### Follow the steps to have git up and running on a folder existing locally on your machine
 
@@ -412,6 +415,77 @@ git rebase --skip
 In case of conflicts during rebase, you need to resolve the manually and then run `git add <filename>` to stage it and then `git rebase --continue` to continue with halted rebase process.<br>
 There is no concept of automatic conflict resolver.
 
+### Github, Working with Github Using Command Line Interface
+- The most important thing is that github shoud be able to work with your terminal.
+- Github doesn't work with your terminal with simply email and password. It works using **SSH** keys.
+- These SSH keys need to be generated and this key needs to be saved in the github settings page so that github knows that you are the same guy who is communicating
+- The communication with github through terminal happens on the basis of SSH and not on the basis of email and password
+- The email and passwoe=rd work well with the web, not on the command line
+- You can also install `gh utility` also known as *github utility*
+- We need to have ssh key on our system as well as on github to verify that communication is authentic and communication can take place through terminal(local machine)
+- We have two authentication methods: SSH key and PATs (Personal access token) to work with github through command line interface.
+- Generate and add ssh key to start communicating with github through command line interface using Github Docs (links attached above)
+
+To verify is ssh is successful, paste the following command on your terminal:
+```bash
+ssh -T git@github.com
+```
+
+**Creating an empty repository on github, Connecting github repo to local folder on computer to that github repository through command line**
+- Pleasw have your ssh key generated and added to your computer and github account. Follow the links attached at the top for more info!
+- Create an empty repository (don't add readme, make it public/private, don't add license yet, add a short description, dont add .gitignore yet)
+- Once repo created you will see a set of commands shown up on github (Quick setup)
+- Follow these steps
+
+  ```bash
+  # Create a folder
+  mkdir gitthree
+
+  # Check directory for confirmation
+  pwd
+  
+  # Check git status
+  git status
+
+  # If git isn't initialized, initialize git
+  git init
+
+  # Check git status again
+  git status
+
+  # Create a README.md file
+  echo "# learn-git" >> README.md
+
+  # Add readme to staging area
+  git add README.md
+
+  # Do the first commit - readme commit
+  git commit -m "Made the README file for this repository"
+
+  # Create your index.html file
+  touch index.html
+
+  # Add code to it
+
+  # Then add it to staging area
+  git add index.html
+
+  # Commit your file
+  git commit -m "Add index.html file to master branch"
+
+  # Create the gitignore file
+  touch .gitignore
+
+  # Rename your master branch to main
+  git branch -M main
+
+  # Check git branch
+  git branch
+
+  #
+  
+  ```
+
 ### Personal research, more advanced commands:
 - To undo changes
 - Go back in time
@@ -421,6 +495,7 @@ There is no concept of automatic conflict resolver.
 - Recovery
 - undo commits
 - Restoring
+- (readme, public/private repo,description, gitignore, license) how to do in terminal
 
 *WIP.................*
 
@@ -454,3 +529,5 @@ There is no concept of automatic conflict resolver.
 - Default text editor such as vim, gdit, nano and sublime can also be used to edit the code, upto you. In this case, VS code is the prime text editor in use.
 - Many a times, it happens that merging of main/master branch happens on a side branch where you are working on some experiment to check/merge the latest updates so not a surprise
 - Once a side/regular branch is merged on main/master branch, you can still work on side branch and merge it again with new features or bug fixes etc.
+- As soon as you initialize git in a folder it turns into a repository or commonly known as git repository.
+- On github master branch is called `main` while git software still calls it `master`
