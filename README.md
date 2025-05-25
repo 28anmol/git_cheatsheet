@@ -552,20 +552,13 @@ git push origin main
 ```
 
 ### Personal research, more advanced commands:
-- To undo changes
-- Go back in time
-- View and explore history
-- Fix mistakes
-- Use commit hashes effectively
-- Recovery
-- undo commits
-- Restoring
-- (readme, public/private repo,description, gitignore, license) how to do in terminal
+
+This includes for instance: to undo changes, go back in time, view and explore history, fix mistakes, use commit hashes effectively, recovery, undo commits, restoring, how to make a repo in terminal and initialize readme, public/private repo, description, gitignore, license and much more...
 
 *WIP.................*
 
 ```bash
-
+WIP.......
 ```
 
 ### Helpful Notes & Tips
