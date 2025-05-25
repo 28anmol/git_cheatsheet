@@ -339,7 +339,7 @@ git stash list
 git stash apply stash@{0}
 ```
 
-Stash pop brings back those changes
+Stash pop brings back those changes<br>
 Stash apply: applies changes and keeps them in stash
 
 
