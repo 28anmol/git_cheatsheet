@@ -7,7 +7,7 @@
 <br>
 <br>
 
-**Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp:** ([Link Tutorial](https://www.youtube.com/watch?v=zTjRZNkhiEU&t=12s)) + my own research and experimentation<br>
+**Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp:** [Link Tutorial](https://www.youtube.com/watch?v=zTjRZNkhiEU&t=12s)<br>
 **Github docs link:** [Github docs](https://docs.github.com/en/get-started)<br>
 **Generating ssh key:** [SSH Key Generate](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)<br>
 **Adding ssh key:** [Add SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)<br>
