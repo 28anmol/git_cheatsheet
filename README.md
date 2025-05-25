@@ -498,7 +498,7 @@ ssh -T git@github.com
   # To connect a remote repository, have a connection with them, So origin is the name of the remote repository - we just named it origin(can also call it branch) for our convenience - see the command below
   git remote add <name> <url>
 
-  # Link your local folder to cloud repository
+  # Link your local folder to cloud repository - you are free to use HTTPS url or SSH url
   git remote add origin https://github.com/28anmol/learn-git.git
 
   # Confirm the remote po configuration
@@ -523,6 +523,35 @@ ssh -T git@github.com
 - If you want to control push - control it from the `git add` stage, commit only those you want to push and then finally push the files you want.
 - If your repo is setup remotely to a repo, you can undo it as well or change it to another repo as well.
 
+**Case Scenario: when you have a repo on the cloud already and you would like to work on it on your local system**
+- Copy the HTTPS or SSH clone url from github
+- Go to your terminal and follow these steps
+  
+```bash
+# URL can be SSH URL or HTTPS URL
+git clone <URL>
+
+# Use the SSH or HTTPS url
+git clone git@github.com:username/website.git
+
+# navigate to your repo
+cd website
+
+# make edits
+
+
+git status
+
+#add to staging area
+git add index.html
+
+# commit
+git commit -m "Update homepage"
+
+# push
+git push origin main
+```
+
 ### Personal research, more advanced commands:
 - To undo changes
 - Go back in time
@@ -537,8 +566,7 @@ ssh -T git@github.com
 *WIP.................*
 
 ```bash
-# URL can be SSH URL or HTTPS URL
-git clone <URL>
+
 ```
 
 ### Helpful Notes & Tips
