@@ -1,9 +1,7 @@
 # Git and Github Cheatsheet
 
 ## Documentation which runs through important git commands and their explanation! Learning git the conventional way - through command line interface!
-
-
-#### What is Git? - Git is a version control software which helps you to keep a track of changes or modifications in a computer file!
+#### What is Git? - Git is a version control software which helps keep a track of changes or modifications in a computer file!
 #### What is Github? - It's a service!
 
 <br>
