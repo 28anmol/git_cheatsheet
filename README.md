@@ -113,7 +113,6 @@ Write code -----> add to trackimng zone of git -----> commit
   ```bash
   git reset <filename>
   ```
-
   OR
 
   ```bash
@@ -124,6 +123,11 @@ Write code -----> add to trackimng zone of git -----> commit
 - Committing to a file with a message (-m):
   ```bash
   git commit -m "add file one"
+  ```
+
+- Adding and commiting at the same time
+  ```bash
+  git commit -am "Your commit message"
   ```
 
 - log command (it's a log of commits with details)
@@ -381,8 +385,47 @@ git restore <filename>
 
 ### Git Rebase
 
+This command kinda rewrites the history, so be extremely cautious while working with `git rebase`.
+- It can be used as an alternative to merging(since it literally performs the merging BUT in merging it keeps your branches separately whereas in rebase it just merges everything into a single timeline)
+- It can also be used as a clean up tool(clean up commits since it re writes the history)
+- Note: if you are on the main branch or master branch, this command `git rebase` is never supposed to run from that branch. This command is meant to run always from the side branch where we are working like bugfix or new feature branch or whatsoever.
+- Never rebase the commits you have already shared.
+- Pushed to github??? - **NEVER Rebase**
 
-### Notes
+This command always runs on a side branch and it means: I am rebasing my branch with the master. Do not ever run rebase command on master branch else the whole mess is on you!!
+```bash
+git rebase master
+```
+
+```bash
+git rebase --abort
+```
+
+```bash
+git rebase --continue
+```
+
+```bash
+git rebase --skip
+```
+
+In case of conflicts during rebase, you need to resolve the manually and then run `git add <filename>` to stage it and then `git rebase --continue` to continue with halted rebase process.<br>
+There is no concept of automatic conflict resolver.
+
+### Personal research, more advanced commands:
+- To undo changes
+- Go back in time
+- View and explore history
+- Fix mistakes
+- Use commit hashes effectively
+- Recovery
+- undo commits
+- Restoring
+
+```bash
+```
+
+### Helpful Notes & Tips
 - Git is a version control system which tracks every change in your code over time. It allows you to undo changes at any point in history, tracks who changed what and why, experiment safely without breaking the fear of breaking the code, wok with others without overwriting each others changes.
 - Git prevents you from making backup of working code(project_final_reallyfinal_reallythisone.zip) before you try a major change where you fear breaking up the whole code because git helps you undo things, go back in time and retrieve previous versions. It's more like a personal time machine.
 - Git tracks files in 3 layers
@@ -405,3 +448,7 @@ git restore <filename>
 - Basically when you merge two branches with conflict, you resolve it manually, then you need to `git add` the file and perform `git commit` afterwards. `git merge` is also basically merging+commiting with a message essentially. If there are no conflicts, you can merge with editor open, you type in the merge message, save and close and you see that the file has been merged with a commit successfully in the terminal.
 - If you want to move your `HEAD` to a previous commit, or you want to go back in time or you want to branch from past, you have to use `<commit-hash>` or the commit id you see on `git log` to do all that stuff. It helps you time travel in git branches to mend your faults or to experiment on a version from the past without affecting the main branch.
 - Stashing is meant for temporary purpose only. It should be used very carefully and one shouldn't be heavily dependent on it.
+- Use Git Graph, source control extensions in vs code to view your files simultaneously being updated through the command line interface.
+- Default text editor such as vim, gdit, nano and sublime can also be used to edit the code, upto you. In this case, VS code is the prime text editor in use.
+- Many a times, it happens that merging of main/master branch happens on a side branch where you are working on some experiment to check/merge the latest updates so not a surprise
+- Once a side/regular branch is merged on main/master branch, you can still work on side branch and merge it again with new features or bug fixes etc.
