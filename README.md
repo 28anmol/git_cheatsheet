@@ -7,6 +7,8 @@
 <br>
 <br>
 
+Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp ([Link Tutorial](https://www.youtube.com/watch?v=zTjRZNkhiEU&t=12s))
+
 **Follow the steps to have git up and running on a folder existing locally on your machine**
 
 - Download Git from www.git-scm.com (Current version - 2.49.0)
