@@ -9,7 +9,7 @@
 
 Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp ([Link Tutorial](https://www.youtube.com/watch?v=zTjRZNkhiEU&t=12s)) + my own research and experimentation
 
-**Follow the steps to have git up and running on a folder existing locally on your machine**
+### Follow the steps to have git up and running on a folder existing locally on your machine
 
 - Download Git from www.git-scm.com (Current version - 2.49.0)
 - Verify version
@@ -24,7 +24,7 @@ Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp ([Link Tutoria
     ```
 
 
-**Setup and configure git on a folder:**
+### Setup git on a folder
 
 - create a folder in your working directory
   ```bash
@@ -87,7 +87,7 @@ Tutorial: Learn Git - Full Course For Beginners from FreeCodeCamp ([Link Tutoria
   ```
 
 
-**Basics of Git and it's working**
+### Basics of Git and it's working
 
 ```bash
 Working Directory -----> git add -----> Staging Area -----> git commit -----> Repo -----> git push -----> Github
@@ -159,7 +159,7 @@ Write code -----> add to trackimng zone of git -----> commit
   This shows the git tree
 
 
-**Git configuration**
+### Git configuration
 
 - Setting up username and email (global scope)
   ```bash
@@ -190,7 +190,7 @@ Write code -----> add to trackimng zone of git -----> commit
   ```
   
 
-**.gitignore file**
+### .gitignore file
 
 A very special file read by git itself. You need to manually create it. There are a lot of information for instance API keys, passwords etc which are sensitive and need to store it separately. This is the folder where you can store this without git tracking any of these info.
 
@@ -203,7 +203,7 @@ Verify the existence of the `.gitignore` file using `ls -la` command. <br>
 Whatever files/folders aren't supposed to be tracked by git, just write it down in the `.gitignore` file, simply write it down and then check the `git status` to confirm if they have been removed. `.gitignore` would be tracked by git itself. <br>
 
 
-**Git Branches**
+### Git Branches
 
 - To know which branch are you working on, use the following command:
   ```bash
@@ -237,7 +237,7 @@ Whatever files/folders aren't supposed to be tracked by git, just write it down 
   git checkout -b <name of new branch>
   ```
 
-**Git branch merging**
+### Git branch merging
 
 In order to merge, you need to first switch to the branch wehere you want codebase to be merged to. Then run the following command which merges the branch to the intended branch where you are currently sitting on.
 
@@ -253,7 +253,7 @@ To delete a branch, write the following command:
 git branch -d <name of branch>
 ```
 
-**Git diff**
+### Git diff
 
 Git diff tells the difference between same files (file A and file A). The only difference is that it shows you the version of the file in X time and Y time.
 - example 1: difference between files when staged and not staged
@@ -301,7 +301,7 @@ Tells difference between two different branches
 git diff <branch-name-one> <branch-name-two>
 ```
 
-**Git Stashing**
+### Git Stashing
 - Create a repo, work on it and commit it on the main
 - switch on another branch and work on it
 - conflicting changes do not allow to switch branch, without commits
@@ -343,7 +343,7 @@ Stash pop brings back those changes<br>
 Stash apply: applies changes and keeps them in stash
 
 
-**More commands in Git**
+### More commands in Git
 
 
 
