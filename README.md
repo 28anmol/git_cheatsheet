@@ -672,7 +672,233 @@ This includes for instance: to undo changes, go back in time, view and explore h
 *WIP.................*
 
 ```bash
-WIP.......
+# Undoing Changes and Going Back In Git
+
+git status				# Check current status of working directory & staging area
+
+git log					# Full log
+git log --oneline			# Short Summary
+git log --graph --oneline --all		# Visual Graph
+
+git diff				# Unstaged changes
+git diff --staged			# Staged Changes
+git diff HEAD				# Changes from last commit
+
+git checkout <commit-hash>		# To go back and explore state of past commit (detached HEAD)
+git checkout main			# To come back to present
+git checkout -- <file>			# Discard changes in a file in the working directory (revert to last commit).
+git checkout -- filename.txt
+
+git restore				# Modern alternative to checkout for restoring files.
+git restore <file>			# Discard local changes (like checkout --)
+git restore --staged <file>		# Unstage a file from index but keep the changes
+
+git reset				# Undo changes in your staging area or even move HEAD and rewrite history (cautiously).
+git reset --soft HEAD~1        		# Undo last commit, keep staged changes
+git reset --mixed HEAD~1       		# Undo last commit, keep files but unstaged
+git reset --hard HEAD~1        		# Undo last commit and delete all changes
+git reset <commit-hash>        		# Rewind to that commit
+
+					# --soft — Move HEAD to a previous commit, keep changes staged.
+					# --mixed (default) — Move HEAD, keep changes in working directory.
+					# --hard — Dangerous: resets everything (HEAD, staging area, working directory).
+
+git revert <commit-hash>		# Safely create a new commit that undoes the changes made by a specific commit.
+
+git reflog				# Show a log of where your HEAD and branches have been. Recover lost commits even after a reset or rebase.
+git checkout <commit-hash>  		# From the reflog to recover
+
+
+
+# Committing And Amending Mistakes
+
+git commit --amend			# Modify the last commit (message or staged content). Don’t use this if the commit is already pushed.
+git add <fixed-file>
+git commit --amend
+git commit --amend -m "New commit message"
+git rebase -i HEAD~3			# If you want to change an older commit yet not pushed, you can use interactive rebase
+git reset --soft HEAD~1			# Undo a commit , change a commit message or add more changes but keep changes staged
+git reset --mixed HEAD~1		# Undo commit and unstage the changes (keep changes in working directory)
+git reset --hard HEAD~1			# Undo commit and discard everything (dangerous)
+git revert <commit-hash>		#  Revert a commit (safe way, creates a new commit that undoes it)
+
+git clean				# Remove untracked files from the working directory.
+git clean -n 				# — Preview
+git clean -f 				# — Delete
+git clean -fd 				# — Delete untracked files and directories
+
+git cherry-pick <commit-hash>		# Apply a commit from anywhere in history onto your current branch.
+
+
+
+# Time Travel And Navigating History
+
+git show <commit-hash>			# See changes, author, and commit message of a commit.
+git bisect				# Debug tool to find which commit introduced a bug.
+git bisect start
+git bisect bad       			# Current commit is broken
+git bisect good <commit>  		# Older good commit
+git bisect reset     			# Stop the bisection
+
+git tag					# Mark specific points in history (e.g., version 1.0).
+git tag v1.0 <commit-hash>
+git checkout v1.0
+
+
+
+# Recovery And Safety
+
+git stash				# Temporarily save your changes without committing.
+git stash              			# Save changes
+git stash pop          			# Re-apply stashed changes
+git stash list         			# View stash history
+git stash show -p      			# Show stash content
+
+git merge --abort			# Abort a merge or rebase that’s going wrong.
+git rebase --abort
+
+# How to go back in time or restore deleted code in git
+
+git log					# See the Commit History (Timeline)
+git log --oneline --graph		# Shows all commits with their hash IDs, authors, dates, and messages.
+git checkout <commit-hash>		# Check Out a Previous Commit (Read-only exploration).This puts you in a detached HEAD state — safe to explore, but you can’t commit here (unless you branch from it)
+git checkout abc1234
+
+git restore --source=<commit-hash> <file-path>		# Restore a File from an Older Commit (to Working Directory)
+git restore --source=abc1234 src/utils.py		# If you deleted or changed something and want just a specific file back from an old commit
+
+# Recover a Deleted Function or File from Past Version
+git log <file-path>  			# See history of this file
+git show <commit-hash>:<file-path>	# This prints the file as it was in that commit. You can then copy-paste your deleted function from here.
+git diff HEAD~1  			# See what changed in the last commit
+git diff <old-commit> <new-commit> <file>	# Or to see what was removed from a file, you’ll see deleted lines prefixed with -
+git revert <commit-hash>		# To go back safely
+
+git checkout -b old-version abc1234	# Creating a branch from an older commit. This creates a new branch starting at that commit.
+
+
+
+# View the Timeline / Commit History
+
+git log					# Full log
+git log --oneline			# Compact view
+git log --oneline --graph --all		# Visual tree
+git show <commit-hash>			# Show changes in a commit
+git log <file>				# File-specific history
+git blame <file>			# Who changed which line (blame)
+
+
+
+# Undoing Changes in Working Directory & Staging
+
+git restore --staged <file>		# Unstage files (keep changes)
+git restore <file>			# Discard local changes (careful!)
+git restore .				# Discard all local changes
+git checkout -- <file>			# Revert to last committed version (Older Git)
+git clean -f				# Remove all untracked files
+git clean -fd				# Remove untracked dirs too
+
+
+
+# Undoing Commits
+
+git commit --amend -m "New message"	# Change last commit message
+git reset --soft HEAD~1			# Undo last commit, keep changes staged
+git reset --mixed HEAD~1		# Undo last commit, keep changes unstaged
+git reset --hard HEAD~1			# Undo last commit, discard everything
+git revert <commit-hash>		# Revert a specific commit (safe, keeps history)
+
+
+
+# Going Back to Older Versions
+
+git checkout <commit-hash>		# Explore old commit (readonly)
+git checkout -b <branch> <commit-hash>	# Create a branch from old commit
+git restore --source=<commit-hash> <file>	# Restore a file from older commit
+git show <commit-hash>:<file>		# View content of file from past
+
+
+
+# Editing Old Commits
+
+git rebase -i HEAD~n 			# Change message of older commit → change pick to reword
+git rebase -i 				# Edit content of older commit → edit
+git rebase --abort			# Abort a rebase in progress
+git rebase --continue			# Continue rebase after fix
+
+
+
+# Diff & Recovery Tools
+
+git diff				# Show changes not staged
+git diff --cached			# Show staged changes
+git diff <commit1> <commit2>		# Compare two commits
+git diff <file>				# See what changed in a file
+git diff <commit> -- <file>		# Compare working dir vs commit
+
+
+
+# Cleaning Up Mistakes
+
+git clean -f				# Remove untracked files
+git clean -fd				# Remove untracked dirs too
+git checkout -				# Revert to previous branch
+git merge --abort			# Abort current merge
+git cherry-pick --abort			# Abort current cherry-pick
+git rebase --abort			# Abort current rebase
+git reset --hard origin/<branch>	# Reset to remote state
+
+
+
+# Deleting files through github
+
+git rm myfile.txt			# This removes the file and stages the deletion for commit.
+
+rm myfile.txt           		# or delete from File Explorer
+git status              		# shows it as deleted
+git add myfile.txt      		# yes! this stages the *deletion*
+git commit -m "Deleted myfile.txt"	# Commit the deletion of file
+git restore myfile.txt			# If you deleted but haven't committed yet, this brings the file back from the last committed state
+git log -- myfile.txt			# Restore a file from an earlier commit (after deletion is committed), If you committed the deletion but want to bring back an old version.
+git checkout <commit-hash> -- myfile.txt	# Find the commit hash where the file existed. Then restore it like this
+git log --diff-filter=D --summary	# how deleted files in history
+git reset HEAD~1         		# go back 1 commit, f you want to undo the deletion commit
+git reset --soft HEAD~1			# soft undo (keep changes)
+git revert <commit-hash>		# revert the commit
+
+
+# Branch Recovery / Safe Actions
+
+git reflog				# Recover lost commit (if lost after reset)
+git checkout <reflog-hash>		# Checkout commit from reflog
+git checkout -b recovered <reflog-hash> # Create branch from reflog commit
+git checkout -b <branch> <hash>		# Recover deleted branch	git reflog → find tip →
+
+
+
+# Reflog: Time Machine for Git
+
+git reflog
+					# Tracks every movement of HEAD — commits, checkouts, rebases, resets, etc. Useful when:
+					# 	- You did a reset --hard and want to undo it.
+					# 	- You deleted a branch and want to recover it.
+					# 	- You want to restore something from an accidentally lost commit.
+
+
+# Safety Tips
+
+					# Use --soft, --mixed, --hard resets carefully.
+					# Always commit or stash before rebasing, merging, or resetting.
+					# NEVER force-push (git push --force) to shared branches without understanding the consequences.
+
+
+
+# Bonus: GUI Tools to Visualize Git History
+# Tool						Description
+# gitk						Classic Git GUI history viewer
+# tig						Terminal Git history viewer
+# VS Code Source Control			Integrated timeline and file history
+# GitLens (VS Code extension)			Super powerful Git history, blame, and commit tools
 ```
 
 ### Helpful Notes & Tips
