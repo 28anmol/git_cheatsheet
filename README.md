@@ -315,7 +315,7 @@ This commsnd shows the staged changes for that particular file vs last commit.
 git diff --staged <filename>
 ```
 
-If you want to know which files are staged(without showing the cide diffs)
+If you want to know which files are staged(without showing the code diffs)
 ```bash
 git diff --staged --name-only
 ```
