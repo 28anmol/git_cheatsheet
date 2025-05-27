@@ -1,6 +1,6 @@
 # Git and Github Cheatsheet
 
-*Disclaimer: Redundant commands have been intentionally repeated in relevant sections for user convenience, emphasis and ease of use. Work still in progress*
+*Disclaimer: Redundant commands have been intentionally repeated in relevant sections for user convenience, emphasis and ease of use. Formatting readme work still in progress! Have Patience 😉*
 
 ## Documentation which runs through important git commands and their explanation! Learning git the conventional way - through command line interface!
 #### What is Git? - Git is a version control software which helps keep a track of changes or modifications in computer file(s)!
