@@ -179,7 +179,7 @@ Write code -----> add to trackimng zone of git -----> commit
   git config --global user.email "Your Email"
   ```
 
-- Setting up the text editor - in this case VS Code (global scope)
+- Setting up the text editor - in this case VS Code (global scope). First add `code` in shell path. Cmd+Shift+P in vscode and run Install code in PATH. Then run this config command
   ```bash
   git config --global core.editor "code --wait"
   ```
