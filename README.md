@@ -952,6 +952,41 @@ git checkout main  			# or whatever your branch is, coming back to present
 
 
 
+# Reorganizing project structure
+mkdir -p src include			# git mv ensures Git tracks it as a move rather than delete+add (keeps history clean).
+git mv main.cpp src/
+git mv utils.cpp src/
+git mv utils.h include/
+
+git add .
+git commit -m "Reorganized project structure: moved sources to src/, headers to include/"
+git push origin main  # or your current branch name
+
+git log --follow src/main.cpp		# This --follow flag tells Git to track history through renames/moves.
+
+# git mv is basically a shortcut for:
+#	- mv oldpath newpath (move the file in the filesystem)
+#	- git add newpath (stage the new location)
+#	- git rm oldpath (remove old location from Git index)
+
+# What git mv does under the hood:
+# git mv oldpath newpath is a convenience command that actually performs these three steps for you:
+# 1. Moves the file in the filesystem (like mv oldpath newpath)
+# 2. Runs git rm oldpath (stages the removal of the old path)
+# 3. Runs git add newpath (stages the addition of the new path)
+
+
+# So, after running git mv, why add again?
+# 1. If you immediately commit, you don’t need to run git add again, because git mv already staged the rename for you.
+# 2. But if you use git mv multiple times or move many files, sometimes you might run git add . to stage any other changes or new files at once.
+# 3. Also, if you manually move files using mv (without git mv), then you must run git add and git rm yourself.
+
+# git mv file1 file2 + immediate commit			No, already staged
+# mv file1 file2 (manual move)				Yes, you must git add & git rm
+# Multiple moves via git mv but no commit yet		You might run git add . to stage all
+
+
+
 
 # Bonus: GUI Tools to Visualize Git History
 # Tool						Description
