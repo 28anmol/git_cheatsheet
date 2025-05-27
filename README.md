@@ -922,6 +922,32 @@ git log origin/main..HEAD --oneline	# List unpushed commits
 git show				# quit command with :q
 
 
+# Git HEAD : It is a very powerful tool in git and is a pointer to your current position in the git repository usually pointing to the latest commit in your currently checked out branch.
+# You can movr your HEAD to any commit(detached HEAD) which helps in inspection, navigation and inspection of git commit history
+
+git log					# shpws the position of HEAD
+git checkout <branch>			# Moves HEAD to that tip of the branch
+git reset --hard HEAD~1			# Moves head position one commit back and resets your files accordingly
+cat .git/HEAD				# Shows where your HEAD points to
+git checkout <commit-hash-id>		# Detached HEAD state
+HEAD~n					# takes it n commits back
+git show HEAD				# shows latest version of your project
+git show HEAD~1
+git show HEAD~2
+git checkout HEAD~1 -- filename.txt	# Restore older version temporarily
+git reset --soft HEAD~1			# undo latest commit but keeps your changes
+git reset --hard HEAD~1			#undo last commit completely, deletes your changes
+git checkout HEAD~2			# Browse past version of your codebase
+git checkout <commit-hash>
+git diff HEAD
+git diff HEAD -- file.txt
+git checkout <commit-hash>
+code.
+git checkout <commit-hash> -- path/to/file.txt		# viewing a single file only in the past
+code path/to/file.txt
+git checkout main  			# or whatever your branch is, coming back to present
+
+
 
 
 # Bonus: GUI Tools to Visualize Git History
