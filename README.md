@@ -928,7 +928,7 @@ git show				# quit command with :q
 # Git HEAD : It is a very powerful tool in git and is a pointer to your current position in the git repository usually pointing to the latest commit in your currently checked out branch.
 # You can movr your HEAD to any commit(detached HEAD) which helps in inspection, navigation and inspection of git commit history
 
-git log					# shpws the position of HEAD
+git log					# shows the position of HEAD
 git checkout <branch>			# Moves HEAD to that tip of the branch
 git reset --hard HEAD~1			# Moves head position one commit back and resets your files accordingly
 cat .git/HEAD				# Shows where your HEAD points to
