@@ -919,6 +919,7 @@ git ls-tree -r origin/main --name-only	# Shows all files pushed to remote
 git ls-tree -r HEAD --name-only		# Show all committed files in local branch
 git show --name-only <commit-hash>	# Shows files added to specific commit only
 git log origin/main..HEAD --oneline	# List unpushed commits
+git show				# quit command with :q
 
 
 
