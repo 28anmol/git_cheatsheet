@@ -74,9 +74,9 @@
   ```bash
   > ls -la
   total 0
-  drwxr-xr-x  3 anmolsingh  staff   96 May 24 12:03 .
-  drwxr-xr-x@ 5 anmolsingh  staff  160 May 24 12:02 ..
-  drwxr-xr-x  9 anmolsingh  staff  288 May 24 12:50 .git
+  drwxr-xr-x  3 username  staff   96 May 24 12:03 .
+  drwxr-xr-x@ 5 username  staff  160 May 24 12:02 ..
+  drwxr-xr-x  9 username  staff  288 May 24 12:50 .git
   ```
 
 - Check contents of .git folder  (**Warning: Do not make any changes in this folder, else the consequenses are on you!**
@@ -646,11 +646,11 @@ Find an open source project(how? - On github mostly through github advanced sear
 Work & Add value to the project ---> make a PR and iterate over it ---> Have Patience ---> Then later it would be merged if it works out. (Making a PR is not a job guarentee)
 
 
-Fixing readme or improving documentation/ isn't generally considered a meaningful contribution to open source projects or worth raising a PR. Documentation is ofcourse important but being a programmer it is expected from you to contribute first to the codebase and then the documentation.
+Fixing readme or improving documentation/ isnt generally considered a meaningful contribution to open source projects or worth raising a PR. Documentation is ofcourse important but being a programmer it is expected from you to contribute first to the codebase and then the documentation.
 
 Also contribute good code/meaningful code as a contribution not throw random code which might break or anything!
 
-ADD VALUE THAT'S IT!
+ADD VALUE THATS IT!
 ```
 
 Steps to create a pull request
