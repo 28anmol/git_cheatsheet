@@ -908,6 +908,21 @@ git reflog
 
 
 
+# Track which files have been committed/pushed
+
+git ls-tree -r HEAD --name-only		# See files committed in current branch
+git log --name-only --pretty=format:	# Show history of committed files
+git status				# modified/untracked files and also uncommitted files
+git log -- <filename>			# Using it to track a specific file
+git diff --name-only origin/main..HEAD	# To check difference with remote branch
+git ls-tree -r origin/main --name-only	# Shows all files pushed to remote
+git ls-tree -r HEAD --name-only		# Show all committed files in local branch
+git show --name-only <commit-hash>	# Shows files added to specific commit only
+git log origin/main..HEAD --oneline	# List unpushed commits
+
+
+
+
 # Bonus: GUI Tools to Visualize Git History
 # Tool						Description
 # gitk						Classic Git GUI history viewer
