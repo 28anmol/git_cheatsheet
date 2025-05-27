@@ -1000,7 +1000,7 @@ git log --follow src/main.cpp		# This --follow flag tells Git to track history t
 ```
 
 ### Helpful Notes & Tips
-- Git is a version control system which tracks every change in your code over time. It allows you to undo changes at any point in history, tracks who changed what and why, experiment safely without breaking the fear of breaking the code, wok with others without overwriting each others changes.
+- Git is a version control system which tracks every change in your code over time. It allows you to undo changes at any point in history, tracks who changed what and why, experiment safely without the fear of breaking the code, work with others without overwriting each others changes.
 - Git prevents you from making backup of working code(project_final_reallyfinal_reallythisone.zip) before you try a major change where you fear breaking up the whole code because git helps you undo things, go back in time and retrieve previous versions. It's more like a personal time machine.
 - Git tracks files in 3 layers
       - Working directory
