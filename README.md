@@ -201,21 +201,21 @@ Write code -----> add to trackimng zone of git -----> commit
   git config --list
   ```
 
-  - Verify git configuration
-    ```bash
-    git config --list --show-origin
-    git config --local --list
-    git config --global --list
-    git config --system --list
-    git config core.editor
-    git config --global core.editor
+- Verify git configuration
+  ```bash
+  git config --list --show-origin
+  git config --local --list
+  git config --global --list
+  git config --system --list
+  git config core.editor
+  git config --global core.editor
 
-    # Check config of local repo
-    .git/config
+  # Check config of local repo
+  .git/config
 
-    # Check global config folder
-    ~/.gitconfig
-    ```
+  # Check global config folder
+  ~/.gitconfig
+  ```
 
 ### .gitignore file
 
