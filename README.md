@@ -959,6 +959,7 @@ mkdir -p src include			# git mv ensures Git tracks it as a move rather than dele
 git mv main.cpp src/
 git mv utils.cpp src/
 git mv utils.h include/
+git mv oldfilename.cpp newfilename.cpp	# Renaming files in git amnd then add commit an push
 
 git add .
 git commit -m "Reorganized project structure: moved sources to src/, headers to include/"
