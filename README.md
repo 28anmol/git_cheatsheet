@@ -772,6 +772,8 @@ git stash show -p      			# Show stash content
 git merge --abort			# Abort a merge or rebase that’s going wrong.
 git rebase --abort
 
+
+
 # How to go back in time or restore deleted code in git
 
 git log					# See the Commit History (Timeline)
@@ -880,6 +882,7 @@ git log --diff-filter=D --summary	# how deleted files in history
 git reset HEAD~1         		# go back 1 commit, f you want to undo the deletion commit
 git reset --soft HEAD~1			# soft undo (keep changes)
 git revert <commit-hash>		# revert the commit
+
 
 
 # Branch Recovery / Safe Actions
