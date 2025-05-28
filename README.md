@@ -1054,6 +1054,8 @@ git log --follow src/main.cpp		# This --follow flag tells Git to track history t
 - Many a times, it happens that merging of main/master branch happens on a side branch where you are working on some experiment to check/merge the latest updates so not a surprise
 - Once a side/regular branch is merged on main/master branch, you can still work on side branch and merge it again with new features or bug fixes etc.
 - As soon as you initialize git in a folder it turns into a repository or commonly known as git repository.
+- Once multiple files added, all committed with one single message
+- if there are multiple commits, and if pushed, all are pushed at once
 - On github master branch is called `main` while git software still calls it `master`
 - Git is a software and github is a service to host your git and codebase online
 - Github: Collaboration + Backup + open Source
