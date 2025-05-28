@@ -238,6 +238,15 @@ git commit -m "Removed the files from git tracking zone"
 
 If files/folders dont exist yet or being tracked yet but their names already exist in gitignore, then the above step is not needed.
 
+```bash
+git check-ignore -v bin/
+git check-ignore -v bin/*
+git check-ignore -v <file_name>
+git check-ignore -v <folder_name>
+```
+
+This will print which rule in .gitignore is causing files to be ignored. If nothing prints, the files/folder are not ignored (so likely tracked or untracked but not ignored).
+
 Verify the existence of the `.gitignore` file using `ls -la` command. <br>
 
 Whatever files/folders aren't supposed to be tracked by git, just write it down in the `.gitignore` file, simply write it down and then check the `git status` to confirm if they have been removed. `.gitignore` would be tracked by git itself. <br>
