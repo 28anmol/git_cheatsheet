@@ -952,6 +952,19 @@ git ls-tree -r HEAD --name-only		# Show all committed files in local branch
 git show --name-only <commit-hash>	# Shows files added to specific commit only
 git log origin/main..HEAD --oneline	# List unpushed commits
 git show				# quit command with :q
+git show --stat <commit-hash>
+git show --stat abc1234
+git diff-tree --no-commit-id --name-only -r <commit-hash> | wc -l
+git diff-tree --no-commit-id --name-only -r abc1234
+git log origin/main..HEAD
+git diff --name-only <start-commit> <end-commit> | sort -u | wc -l
+git diff --name-only <start-commit> <end-commit>
+git reflog origin/main
+abc1234 [email@example.com] pushed: commit: Updated build script
+git log origin/main..HEAD
+git log <last-remote-commit>..HEAD --stat
+git diff --stat <start_commit> <end_commit>
+git diff --name-only <start_commit> <end_commit>
 
 
 # Git HEAD : It is a very powerful tool in git and is a pointer to your current position in the git repository usually pointing to the latest commit in your currently checked out branch.
