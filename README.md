@@ -227,6 +227,17 @@ A very special file read by git itself. You need to manually create it. There ar
 touch .gitignore
 ```
 
+If file already exists and tracked then you need to remove tracked files from index and commit it
+```bash
+git rm --cached path/to/file_or_folder
+git rm -r --cached build/
+git rm -r --cached bin/
+git rm -r --cached .log
+git commit -m "Removed the files from git tracking zone"
+```
+
+If files/folders dont exist yet or being tracked yet but their names already exist in gitignore, then the above step is not needed.
+
 Verify the existence of the `.gitignore` file using `ls -la` command. <br>
 
 Whatever files/folders aren't supposed to be tracked by git, just write it down in the `.gitignore` file, simply write it down and then check the `git status` to confirm if they have been removed. `.gitignore` would be tracked by git itself. <br>
