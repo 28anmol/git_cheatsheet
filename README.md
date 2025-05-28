@@ -251,6 +251,13 @@ Verify the existence of the `.gitignore` file using `ls -la` command. <br>
 
 Whatever files/folders aren't supposed to be tracked by git, just write it down in the `.gitignore` file, simply write it down and then check the `git status` to confirm if they have been removed. `.gitignore` would be tracked by git itself. <br>
 
+Always commit gitignore file if modified, else git doesn't know which files/folders to ignore
+```bash
+git add .gitignore
+git add /path/to/gitignore
+git commit -m "Modified gitignore file"
+git push -u origin main
+```
 
 ### Git Branches
 
