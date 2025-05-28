@@ -642,7 +642,7 @@ Other Github features:
 ### Making pull requests and contributing to open source projects
 
 ```bash
-Find an open source project(how? - On github mostly through github advanced search) ---> Talk to maintainers(slack,twitter,discord whatever) ---> Open an issue ---> Get the issue assigned (to save others time for other productive stuff) --->
+Find an open source project(how ? - On github mostly through github advanced search) ---> Talk to maintainers(slack,twitter,discord whatever) ---> Open an issue ---> Get the issue assigned (to save others time for other productive stuff) --->
 Work & Add value to the project ---> make a PR and iterate over it ---> Have Patience ---> Then later it would be merged if it works out. (Making a PR is not a job guarentee)
 
 
@@ -669,7 +669,7 @@ git push -u origin <newly created branch>
 # Compare and pull request
 # I have forked repo, created a neew branch where i fixed the bug , now compare and pull request.
 # Whole idea is: i have made these changes and i want to send the changes to the main owner of the repository.
-In this case the repo is ours since it is forked
+# In this case the repo is ours since it is forked
 
 # Add title and description very thoughtfully
 
