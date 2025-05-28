@@ -952,9 +952,9 @@ git ls-tree -r HEAD --name-only		# Show all committed files in local branch
 git show --name-only <commit-hash>	# Shows files added to specific commit only
 git log origin/main..HEAD --oneline	# List unpushed commits
 git show				# quit command with :q
-git show --stat <commit-hash>
+git show --stat <commit-hash>		
 git show --stat abc1234
-git diff-tree --no-commit-id --name-only -r <commit-hash> | wc -l
+git diff-tree --no-commit-id --name-only -r <commit-hash> | wc -l		
 git diff-tree --no-commit-id --name-only -r abc1234
 git log origin/main..HEAD
 git diff --name-only <start-commit> <end-commit> | sort -u | wc -l
@@ -1068,6 +1068,7 @@ git log --follow src/main.cpp		# This --follow flag tells Git to track history t
 - Once a side/regular branch is merged on main/master branch, you can still work on side branch and merge it again with new features or bug fixes etc.
 - As soon as you initialize git in a folder it turns into a repository or commonly known as git repository.
 - Once multiple files added, all committed with one single message
+- Git does not track "pushes" directly — it tracks commits. Git tracks commits, not pushes. So there’s no built-in "git log of pushes" unless you're using a Git server like GitHub, GitLab, or Bitbucket that logs push events.
 - if there are multiple commits, and if pushed, all are pushed at once
 - On github master branch is called `main` while git software still calls it `master`
 - Git is a software and github is a service to host your git and codebase online
