@@ -469,7 +469,7 @@ There is no concept of automatic conflict resolver.
 - Github doesn't work with your terminal with simply email and password. It works using **SSH** keys.
 - These SSH keys need to be generated and this key needs to be saved in the github settings page so that github knows that you are the same guy who is communicating
 - The communication with github through terminal happens on the basis of SSH and not on the basis of email and password
-- The email and passwoe=rd work well with the web, not on the command line
+- The email and password work well with the web, not on the command line
 - You can also install `gh utility` also known as *github utility*
 - We need to have ssh key on our system as well as on github to verify that communication is authentic and communication can take place through terminal(local machine)
 - We have two authentication methods: SSH key and PATs (Personal access token) to work with github through command line interface.
